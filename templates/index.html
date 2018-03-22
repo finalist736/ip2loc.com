@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-54235612-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-54235612-2');
+    </script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <title>IP to location tool</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="Ip address to geo position tool. Shows where is IP address located on map.">
+    <meta name="keywords" content="geo, ip, ip address, location, map, position">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="shortcut icon" href="//ip2loc.com/img/icons8-globe-64.png" type="image/png">
+    <style>
+        body {font-size: 18px;}
+        .mgt {margin-top: 15px;}
+        .mgb {margin-bottom: 15px;}
+        #map {height: 500px;max-width: 728px;width: 100%;}
+        .pdt {padding-top: 4px;}
+    </style>
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.12';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-1">
+            <a href="//ip2loc.com/"><img src="//ip2loc.com/img/icons8-globe-64.png" alt="icon earth"></a>
+        </div>
+        <div class="col-xs-11">
+            <a href="//ip2loc.com/"><h2>IP 2 location</h2></a>
+        </div>
+    </div>
+    <div class="row mgt mgb">
+        <div class="col-xs-12 col-md-4">
+            <div class="row">
+                <div class="col-xs-12">
+                    <!-- ip2loc adapt -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-1719298041692697"
+                         data-ad-slot="2333674363"
+                         data-ad-format="auto"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <form class="form-inline" method="get" action="/">
+                        <div class="form-group">
+                            <label for="ip">IP Address</label>
+                            <input type="text" name="ip" placeholder="enter ip address" class="form-control" id="ip">
+                            <button type="submit" class="btn btn-default" aria-label="submit">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row mgt">
+                {{ if .IP2Locationrecord }}
+                <div class="col-xs-12">
+                    <div class="row">
+                        <div class="col-xs-4"><strong>IP Address:</strong></div>
+                        <div class="col-xs-8">{{ .IP }}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4"><strong>Country:</strong></div>
+                        <div class="col-xs-8">{{ .Country_long }}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4"><strong>Code:</strong></div>
+                        <div class="col-xs-8">{{ .Country_short }}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4"><strong>Region:</strong></div>
+                        <div class="col-xs-8">{{ .Region }}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4"><strong>City:</strong></div>
+                        <div class="col-xs-8">{{ .City }}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4"><strong>Latitude:</strong></div>
+                        <div class="col-xs-8">{{ .Latitude }}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4"><strong>Longitude:</strong></div>
+                        <div class="col-xs-8">{{ .Longitude }}</div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-8">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div id="map"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:728px;height:90px"
+                         data-ad-client="ca-pub-1719298041692697"
+                         data-ad-slot="2923921057"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mgb">
+        <div class="col-xs-4">
+            <div class="fb-like pull-right" data-href="http://ip2loc.com/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
+        </div>
+        <div class="col-xs-8 pdt">
+            This site includes IP2Location LITE data available from <a target="_blank" href="https://lite.ip2location.com">http://lite.ip2location.com</a>.
+        </div>
+    </div>
+</div>
+<script>
+    var map;
+    function initMap() {
+        var position = {lat: {{ .Latitude }}, lng: {{ .Longitude }}};
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: position,
+            zoom: 9
+        });
+        var marker = new google.maps.Marker({
+            position: position,
+            map: map
+        });
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ .GoogleApiKey }}&callback=initMap" async defer></script>
+
+</body>
+</html>

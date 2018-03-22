@@ -1,0 +1,12 @@
+listen=:57058
+socket_path=/tmp/ip2loc.socket
+#logs path and types
+logtype=std
+logpath=.
+loglevel=debug
+# profiling: cpu, mem, none
+profiling=none
+# where is ip2location db file?
+ip2location=/usr/share/ip2loc/IP2LOCATION-LITE-DB5.BIN
+templates=/path/to/templates/
+apikey=111222333444555666
